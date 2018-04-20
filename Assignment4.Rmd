@@ -187,7 +187,7 @@ type= rep(c("posterior","prior"), each =1e4)
 value =c(t(samples$b), t(samples$bprior))
 d = data.frame(value, type)
 
-ggplot(d,aes(value,group =type)) +geom_density()
+ggplot(d,aes(value,group =type, col =type)) +geom_density()
 
 # m4.2 - meta-analystical
 samples = extract.samples(m4.2, n=1e4)
@@ -200,7 +200,7 @@ type= rep(c("posterior","prior"), each =1e4)
 value =c(t(samples$b), t(samples$bprior))
 d = data.frame(value, type)
 
-ggplot(d,aes(value,group =type)) +geom_density()
+ggplot(d,aes(value,group =type, col=type)) +geom_density()
 ```
 
 Step 6: Prepare a nice write up of the analysis and answer the questions at the top.
